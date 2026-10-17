@@ -1,6 +1,6 @@
 # Loop for Scientific Research
 
-[简体中文](README.zh-CN.md)
+**English** | [简体中文](README.zh-CN.md)
 
 > **v0.01 · Concept preview.** An evolving project plan and proposed architecture. Executable integration is not yet available.
 
