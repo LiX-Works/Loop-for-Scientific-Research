@@ -39,7 +39,7 @@
 <polyline points="685,193 774,193" fill="none" stroke="#a4adba" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
 <polyline points="685,210 759,210" fill="none" stroke="#a4adba" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
 <text x="735" y="250" class="small" text-anchor="middle">Model C</text>
-<text x="580" y="310" class="body" text-anchor="middle" style="fill:#655277">One · two · more models</text>
+<text x="580" y="310" class="body" text-anchor="middle" style="fill:#655277">Different views on one question</text>
 <text x="925" y="138" class="label" text-anchor="start">Synthesize a plan</text>
 <circle cx="942" cy="180" r="7" fill="#6b9992"/>
 <polyline points="956,180 988,180 1021,210" fill="none" stroke="#7b9e98" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
@@ -107,6 +107,6 @@
 <polyline points="540,637 540,670 1035,670 1035.0,649.0" fill="none" stroke="#648b85" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
 <polygon points="1035,637 1041.0,650.0 1029.0,650.0" fill="#648b85"/>
 <text x="788" y="707" class="body" text-anchor="middle" style="fill:#466d66">Request a specific check</text>
-<text x="40" y="704" class="small" text-anchor="start" style="fill:#526576">Replaceable modules</text>
+<text x="40" y="704" class="small" text-anchor="start" style="fill:#526576">Decide from evidence</text>
 <text x="40" y="735" class="small" text-anchor="start" style="fill:#526576">Shared brief · evidence · decisions</text>
 </svg>

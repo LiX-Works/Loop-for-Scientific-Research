@@ -81,7 +81,7 @@ def build() -> str:
         line([(x + 20, 193), (x + 109, 193)], '#a4adba', 3)
         line([(x + 20, 210), (x + 94, 210)], '#a4adba', 3)
         text(x + 70, 250, label, 'small', 'middle')
-    text(580, 310, 'One · two · more models', 'body', 'middle', '#655277')
+    text(580, 310, 'Different views on one question', 'body', 'middle', '#655277')
 
     # Synthesis makes a next step while retaining material disagreements.
     text(925, 138, 'Synthesize a plan', 'label')
@@ -131,7 +131,7 @@ def build() -> str:
     arrow([(540, 637), (540, 670), (1035, 670), (1035, 637)], '#648b85')
     text(788, 707, 'Request a specific check', 'body', 'middle', '#466d66')
 
-    text(40, 704, 'Replaceable modules', 'small', fill='#526576')
+    text(40, 704, 'Decide from evidence', 'small', fill='#526576')
     text(40, 735, 'Shared brief · evidence · decisions', 'small', fill='#526576')
     add('</svg>')
     return '\n'.join(parts) + '\n'

@@ -10,15 +10,23 @@ A proposed workflow for working through research questions with a team of AI age
 
 ![Proposed research loop: context, independent advice, synthesis, execution, review, and targeted iteration](assets/overview.svg)
 
-This preview includes a design outline, the editable illustration above, and three manual handoff templates.
+This preview includes a design outline, three editable illustrations, and three manual handoff templates.
 
-## What the loop is for
+## From a question to the next experiment
 
-- **Get independent perspectives.** Models develop their own assessments before a replaceable synthesizer compares the options and unresolved disagreements.
-- **Connect thinking with work.** An execution team handles literature, simulation, analysis, figures, and other tasks through the available tools.
-- **Review the evidence.** Reviewers examine results and their supporting materials, then request specific follow-up work or prepare a decision for the researcher.
+Advisors first assess the same question independently. A synthesizer compares their views and forms a plan. The execution team gathers sources and computational results; reviewers inspect the evidence and decide what needs attention next.
 
-Different parts can be changed independently. Start with a small advisory and review team; add focused exploration, writing, broader research, or tool discovery when the question calls for it. Model roles can change with the task.
+![Detailed proposed process: shared brief, independent advisors, synthesis, coordinated execution, evidence checks, independent reviewers, and targeted feedback paths](assets/research-cycle.svg)
+
+An execution problem returns for local repair. Missing evidence triggers a targeted check or a new test. A deeper concern reopens the approach. The researcher receives the findings, remaining disagreements, and choices for the next round.
+
+## Change the module, keep the handoff
+
+Choose one advisory setup for the current question: a single model, two independent models, or a wider exploratory panel. They fit the same position in the workflow and hand their assessments to synthesis.
+
+![Proposed module choices: one, two, or five model sessions can fill the same Advice position; review, writing, and search are also replaceable parts](assets/modules.svg)
+
+Review, writing, and search can also be replaced independently. The researcher or an authorized coordinator selects the setup to match the task; a larger panel is an option, not a promise of better results.
 
 ## Start with the handoffs
 

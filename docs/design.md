@@ -1,6 +1,6 @@
 # Design direction
 
-Loop for Scientific Research is an early project plan for organizing AI-assisted scientific work. Its proposed contribution is the connection between independent advice, tool-based execution, evidence review, and the researcher's decisions. Version 0.01 provides an illustration and manual templates; the runtime remains to be built.
+Loop for Scientific Research is an early project plan for organizing AI-assisted scientific work. Its proposed contribution is the connection between independent advice, tool-based execution, evidence review, and the researcher's decisions. Version 0.01 provides illustrated design proposals and manual templates; the runtime remains to be built.
 
 ## One research question, several connected loops
 
