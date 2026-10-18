@@ -40,9 +40,11 @@ def build() -> str:
         px, py = points[-2]
         norm = math.hypot(ex - px, ey - py)
         ux, uy = (ex - px) / norm, (ey - py) / norm
-        bx, by = ex - 12 * ux, ey - 12 * uy
+        head = min(12, norm * .36)
+        half = head * .46
+        bx, by = ex - head * ux, ey - head * uy
         line(points[:-1] + [(bx + ux, by + uy)], color, width)
-        add(f'<polygon points="{ex},{ey} {bx - 6 * uy},{by + 6 * ux} {bx + 6 * uy},{by - 6 * ux}" fill="{color}"/>')
+        add(f'<polygon points="{ex},{ey} {bx - half * uy},{by + half * ux} {bx + half * uy},{by - half * ux}" fill="{color}"/>')
 
     def session(x: float, y: float, w: float, h: float, label: str, accent: str) -> None:
         rect(x, y, w, h, '#ffffff', accent, 11, 2.3)

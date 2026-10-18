@@ -39,11 +39,13 @@ def build() -> str:
         dx, dy = end[0] - prev[0], end[1] - prev[1]
         size = math.hypot(dx, dy)
         ux, uy = dx / size, dy / size
-        base = (end[0] - 13 * ux, end[1] - 13 * uy)
+        head = min(12, size * .36)
+        half = head * .46
+        base = (end[0] - head * ux, end[1] - head * uy)
         shaft_end = (base[0] + ux, base[1] + uy)
         line(points[:-1] + [shaft_end], color, width)
-        a = (base[0] - 6 * uy, base[1] + 6 * ux)
-        b = (base[0] + 6 * uy, base[1] - 6 * ux)
+        a = (base[0] - half * uy, base[1] + half * ux)
+        b = (base[0] + half * uy, base[1] - half * ux)
         add(f'<polygon points="{end[0]},{end[1]} {a[0]},{a[1]} {b[0]},{b[1]}" fill="{color}"/>')
 
     def document(x: float, y: float, color: str = '#526576', scale: float = 1) -> None:

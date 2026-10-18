@@ -73,7 +73,7 @@
 <circle cx="1077.5" cy="311" r="2.4" fill="#ad9ac5"/>
 <text x="1085.5" y="357" class="model" text-anchor="middle">E</text>
 <polyline points="351,412 351.0,454.0" class="wire" stroke="#927aaa" stroke-width="4"/>
-<polygon points="351,465 345.0,453.0 357.0,453.0" fill="#927aaa"/>
+<polygon points="351,465 345.48,453.0 356.52,453.0" fill="#927aaa"/>
 <text x="374" y="448" class="body" text-anchor="start" style="fill:#6e5689">Swap in</text>
 <rect x="26" y="479" width="178" height="133" rx="18" fill="#fff5e4" stroke="#ceb68e" stroke-width="2"/>
 <g transform="translate(115.0 525)" fill="none" stroke="#657589" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -102,14 +102,14 @@
 <circle cx="-4" cy="-4" r="20"/><path d="M11 12 L26 27 M-13 -3 L-5 5 L8 -10"/>
 </g>
 <text x="1148.5" y="587" class="label" text-anchor="middle">Review</text>
-<polyline points="214,547 234.0,547.0" class="wire" stroke="#7c8c9c" stroke-width="3.5"/>
-<polygon points="245,547 233.0,553.0 233.0,541.0" fill="#7c8c9c"/>
-<polyline points="457,547 477.0,547.0" class="wire" stroke="#7c8c9c" stroke-width="3.5"/>
-<polygon points="488,547 476.0,553.0 476.0,541.0" fill="#7c8c9c"/>
-<polyline points="729,547 749.0,547.0" class="wire" stroke="#7c8c9c" stroke-width="3.5"/>
-<polygon points="760,547 748.0,553.0 748.0,541.0" fill="#7c8c9c"/>
-<polyline points="1002,547 1022.0,547.0" class="wire" stroke="#7c8c9c" stroke-width="3.5"/>
-<polygon points="1033,547 1021.0,553.0 1021.0,541.0" fill="#7c8c9c"/>
+<polyline points="214,547 234.84,547.0" class="wire" stroke="#7c8c9c" stroke-width="3.5"/>
+<polygon points="245,547 233.84,552.1336 233.84,541.8664" fill="#7c8c9c"/>
+<polyline points="457,547 477.84,547.0" class="wire" stroke="#7c8c9c" stroke-width="3.5"/>
+<polygon points="488,547 476.84,552.1336 476.84,541.8664" fill="#7c8c9c"/>
+<polyline points="729,547 749.84,547.0" class="wire" stroke="#7c8c9c" stroke-width="3.5"/>
+<polygon points="760,547 748.84,552.1336 748.84,541.8664" fill="#7c8c9c"/>
+<polyline points="1002,547 1022.84,547.0" class="wire" stroke="#7c8c9c" stroke-width="3.5"/>
+<polygon points="1033,547 1021.84,552.1336 1021.84,541.8664" fill="#7c8c9c"/>
 <polyline points="32,665 1248,665" class="wire" stroke="#dce3e9" stroke-width="2"/>
 <text x="32" y="721" class="label" text-anchor="start">Other swappable</text>
 <text x="32" y="758" class="label" text-anchor="start">modules</text>

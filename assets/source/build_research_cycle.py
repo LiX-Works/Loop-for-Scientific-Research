@@ -36,9 +36,11 @@ def build() -> str:
         px, py = points[-2]
         length = math.hypot(x - px, y - py)
         ux, uy = (x - px) / length, (y - py) / length
-        bx, by = x - 13 * ux, y - 13 * uy
+        head = min(12, length * .36)
+        half = head * .46
+        bx, by = x - head * ux, y - head * uy
         line(points[:-1] + [(bx + ux, by + uy)], color, width, dash)
-        out.append(f'<polygon points="{x},{y} {bx - 6 * uy},{by + 6 * ux} {bx + 6 * uy},{by - 6 * ux}" fill="{color}"/>')
+        out.append(f'<polygon points="{x},{y} {bx - half * uy},{by + half * ux} {bx + half * uy},{by - half * ux}" fill="{color}"/>')
 
     def node(x, y, w, h, title, sub='', fill='#ffffff', stroke='#c6d0d9'):
         box(x, y, w, h, fill, stroke)
@@ -70,9 +72,9 @@ def build() -> str:
     arrow([(858, 160), (827, 160)])
 
     # Three adjacent stages keep the complete process readable at README width.
-    box(60, 260, 350, 510, '#faf8fd', '#d4c9e4', 22)
-    box(465, 260, 350, 510, '#f6faf9', '#bfd6d1', 22)
-    box(870, 260, 350, 510, '#f6f8fc', '#c5d0e0', 22)
+    box(60, 260, 350, 530, '#faf8fd', '#d4c9e4', 22)
+    box(465, 260, 350, 530, '#f6faf9', '#bfd6d1', 22)
+    box(870, 260, 350, 530, '#f6f8fc', '#c5d0e0', 22)
     text(235, 307, '1  PLAN', 'section', 'middle', '#6c5588')
     text(640, 307, '2  EXECUTE', 'section', 'middle', '#466f67')
     text(1045, 307, '3  REVIEW', 'section', 'middle', '#506c8d')
@@ -88,24 +90,24 @@ def build() -> str:
     line([(130, 530), (350, 530)], purple, 3)
     text(235, 574, 'Options · assumptions', anchor='middle', color='#6c5588')
     text(235, 610, 'Tests · uncertainties', anchor='middle', color='#6c5588')
-    arrow([(240, 622), (240, 638)], purple, 3)
-    node(85, 650, 300, 80, 'Compare & choose', 'Plan + open questions', '#f0eaf8', '#bca9d3')
+    arrow([(240, 622), (240, 668)], purple, 3)
+    node(85, 680, 300, 80, 'Compare & choose', 'Plan + open questions', '#f0eaf8', '#bca9d3')
 
     node(490, 350, 300, 65, 'Task coordinator', fill='#e8f3f0', stroke='#aac9c1')
-    arrow([(397, 690), (438, 690), (438, 382), (478, 382)], teal)
-    line([(640, 427), (640, 430), (490, 430), (490, 583)], teal, 3)
-    for y, label in [(440, 'Literature'), (500, 'Computation'), (560, 'Data & figures')]:
-        node(520, y, 250, 46, label, fill='#ffffff', stroke='#b4d0c9')
-        arrow([(490, y + 23), (508, y + 23)], teal, 3)
+    arrow([(397, 720), (438, 720), (438, 398), (478, 398)], teal)
+    line([(610, 425), (610, 440), (500, 440), (500, 606)], teal, 3)
+    for y, label in [(475, 'Literature'), (529, 'Computation'), (583, 'Data & figures')]:
+        node(540, y, 230, 46, label, fill='#ffffff', stroke='#b4d0c9')
+        arrow([(500, y + 23), (528, y + 23)], teal, 3)
         line([(782, y + 23), (800, y + 23)], teal, 3)
-    line([(800, 463), (800, 625), (640, 625)], teal, 3)
-    arrow([(640, 625), (640, 638)], teal, 3)
-    node(490, 650, 300, 80, 'Evidence package', 'Check sources & outputs', '#e8f3f0', '#aac9c1')
+    line([(800, 498), (800, 642), (640, 642)], teal, 3)
+    arrow([(640, 642), (640, 668)], teal, 3)
+    node(490, 680, 300, 80, 'Evidence package', 'Check sources & outputs', '#e8f3f0', '#aac9c1')
 
     # Local repair stays inside execution. A later review can request new work.
-    arrow([(478, 690), (475, 690), (475, 440), (640, 440), (640, 427)], amber, 3)
+    arrow([(478, 720), (475, 720), (475, 455), (730, 455), (730, 425)], amber, 3)
     text(1045, 345, 'Independent reviewers', anchor='middle')
-    arrow([(802, 690), (843, 690), (843, 365), (1160, 365)], blue, 3)
+    line([(802, 720), (843, 720), (843, 365), (1160, 365)], blue, 3)
     for cx in (940, 1050, 1160):
         arrow([(cx, 365), (cx, 388)], blue, 3)
     for x, label in [(895, 'A'), (1005, 'B'), (1115, 'C')]:
@@ -115,19 +117,19 @@ def build() -> str:
     line([(940, 530), (1160, 530)], blue, 3)
     text(1045, 574, 'Evidence · alternatives', anchor='middle', color='#506c8d')
     text(1045, 610, 'Targeted follow-up', anchor='middle', color='#506c8d')
-    arrow([(1050, 622), (1050, 638)], blue, 3)
-    node(895, 650, 300, 80, 'Review synthesis', 'Resolve or retain doubts', '#e9f0fa', '#acbfd9')
+    arrow([(1050, 622), (1050, 668)], blue, 3)
+    node(895, 680, 300, 80, 'Review synthesis', 'Resolve or retain doubts', '#e9f0fa', '#acbfd9')
 
     # Feedback uses the outer margins instead of extending the figure vertically.
-    arrow([(1005, 742), (1005, 790), (30, 790), (30, 240), (395, 240), (395, 353)], purple, 3.5)
-    arrow([(1080, 742), (1080, 810), (450, 810), (450, 382), (478, 382)], teal, 3.5)
+    arrow([(1005, 772), (1005, 810), (30, 810), (30, 700), (73, 700)], purple, 3.5)
+    arrow([(1080, 772), (1080, 830), (450, 830), (450, 367), (478, 367)], teal, 3.5)
 
-    node(870, 850, 350, 90, 'Optional writing', 'Report & explain', '#f3f1f8', '#cfc5df')
-    node(465, 850, 350, 90, 'Researcher review', 'Findings + next choices', '#fff6e5', '#dcc9a7')
-    arrow([(1207, 690), (1260, 690), (1260, 895), (1232, 895)], blue)
-    text(1293, 802, 'Ready', anchor='middle', color='#506c8d', rotate=90)
-    arrow([(858, 895), (827, 895)], amber)
-    for y, color, label in [(864, amber, 'Repair execution'), (900, teal, 'Add evidence'), (936, purple, 'Reconsider the plan')]:
+    node(870, 865, 350, 90, 'Optional writing', 'Report & explain', '#f3f1f8', '#cfc5df')
+    node(465, 865, 350, 90, 'Researcher review', 'Findings + next choices', '#fff6e5', '#dcc9a7')
+    arrow([(1207, 720), (1260, 720), (1260, 910), (1232, 910)], blue)
+    text(1293, 817, 'Ready', anchor='middle', color='#506c8d', rotate=90)
+    arrow([(858, 910), (827, 910)], amber)
+    for y, color, label in [(879, amber, 'Repair execution'), (915, teal, 'Add evidence'), (951, purple, 'Reconsider the plan')]:
         line([(60, y - 8), (86, y - 8)], color, 4)
         text(100, y, label, color=color)
     out.append('</svg>')

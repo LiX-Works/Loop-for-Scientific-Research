@@ -47,8 +47,8 @@
 <polyline points="956,210 988,210 1021,210" fill="none" stroke="#7b9e98" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
 <circle cx="942" cy="240" r="7" fill="#6b9992"/>
 <polyline points="956,240 988,240 1021,210" fill="none" stroke="#7b9e98" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
-<polyline points="1021,210 1071.0,210.0" fill="none" stroke="#527d76" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
-<polygon points="1083,210 1070.0,216.0 1070.0,204.0" fill="#527d76"/>
+<polyline points="1021,210 1072.0,210.0" fill="none" stroke="#527d76" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="1083,210 1071.0,215.52 1071.0,204.48" fill="#527d76"/>
 <g transform="translate(1103 177) scale(0.96)" fill="none" stroke="#527d76" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
 <path d="M0 0 H39 L55 16 V65 H0 Z M39 0 V16 H55"/>
 <path d="M12 29 H41 M12 41 H41 M12 53 H31"/>
@@ -91,21 +91,21 @@
 <polyline points="111,542 126,527 144,531" fill="none" stroke="#9a8054" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
 <text x="62" y="584" class="body" text-anchor="start">Findings &amp;</text>
 <text x="62" y="613" class="body" text-anchor="start">decisions</text>
-<polyline points="280,207 306.0,207.0" fill="none" stroke="#697e8c" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
-<polygon points="318,207 305.0,213.0 305.0,201.0" fill="#697e8c"/>
-<polyline points="842,207 876.0,207.0" fill="none" stroke="#697e8c" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
-<polygon points="888,207 875.0,213.0 875.0,201.0" fill="#697e8c"/>
-<polyline points="1065,332 1065.0,386.0" fill="none" stroke="#527d76" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
-<polygon points="1065,398 1059.0,385.0 1071.0,385.0" fill="#527d76"/>
-<polyline points="828,520 774.0,520.0" fill="none" stroke="#697e8c" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
-<polygon points="762,520 775.0,514.0 775.0,526.0" fill="#697e8c"/>
-<polyline points="318,520 294.0,520.0" fill="none" stroke="#9a8054" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
-<polygon points="282,520 295.0,514.0 295.0,526.0" fill="#9a8054"/>
-<polyline points="540,398 540.0,359.0" fill="none" stroke="#8c79a7" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
-<polygon points="540,347 546.0,360.0 534.0,360.0" fill="#8c79a7"/>
+<polyline points="280,207 307.0,207.0" fill="none" stroke="#697e8c" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="318,207 306.0,212.52 306.0,201.48" fill="#697e8c"/>
+<polyline points="842,207 877.0,207.0" fill="none" stroke="#697e8c" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="888,207 876.0,212.52 876.0,201.48" fill="#697e8c"/>
+<polyline points="1065,332 1065.0,387.0" fill="none" stroke="#527d76" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="1065,398 1059.48,386.0 1070.52,386.0" fill="#527d76"/>
+<polyline points="828,520 773.0,520.0" fill="none" stroke="#697e8c" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="762,520 774.0,514.48 774.0,525.52" fill="#697e8c"/>
+<polyline points="318,520 293.0,520.0" fill="none" stroke="#9a8054" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="282,520 294.0,514.48 294.0,525.52" fill="#9a8054"/>
+<polyline points="540,398 540.0,358.0" fill="none" stroke="#8c79a7" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="540,347 545.52,359.0 534.48,359.0" fill="#8c79a7"/>
 <text x="557" y="380" class="small" text-anchor="start" style="fill:#6f588b">Revisit the plan</text>
-<polyline points="540,637 540,670 1035,670 1035.0,649.0" fill="none" stroke="#648b85" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
-<polygon points="1035,637 1041.0,650.0 1029.0,650.0" fill="#648b85"/>
+<polyline points="540,637 540,670 1035,670 1035.0,647.88" fill="none" stroke="#648b85" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="1035,637 1040.4648,648.88 1029.5352,648.88" fill="#648b85"/>
 <text x="788" y="707" class="body" text-anchor="middle" style="fill:#466d66">Request a specific check</text>
 <text x="40" y="704" class="small" text-anchor="start" style="fill:#526576">Decide from evidence</text>
 <text x="40" y="735" class="small" text-anchor="start" style="fill:#526576">Shared brief · evidence · decisions</text>
