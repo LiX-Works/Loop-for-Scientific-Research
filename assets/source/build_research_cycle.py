@@ -50,6 +50,20 @@ def build() -> str:
         else:
             text(x + w / 2, y + h / 2 + 10, title, 'title', 'middle')
 
+    human = '#b45309'
+
+    def check(cx, cy, required=True, r=19):
+        """Human checkpoint badge: solid = required, dashed = optional."""
+        if required:
+            out.append(f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="{human}" stroke="#ffffff" stroke-width="3"/>')
+            glyph = '#ffffff'
+        else:
+            out.append(f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="#ffffff" stroke="{human}" stroke-width="2.6" stroke-dasharray="5 4"/>')
+            glyph = human
+        s = r / 19
+        out.append(f'<circle cx="{cx}" cy="{cy - 5 * s:.1f}" r="{5.2 * s:.1f}" fill="{glyph}"/>')
+        out.append(f'<rect x="{cx - 8.5 * s:.1f}" y="{cy + 1.5 * s:.1f}" width="{17 * s:.1f}" height="{9.5 * s:.1f}" rx="{4.5 * s:.1f}" fill="{glyph}"/>')
+
     def memo(x, y, w, label, color):
         box(x, y, w, 100, '#ffffff', color, 13)
         text(x + w / 2, y + 37, label, 'title', 'middle')
@@ -62,7 +76,6 @@ def build() -> str:
     amber = '#ac8950'
 
     text(60, 46, 'Inside the research loop', 'heading')
-    text(1220, 46, 'Proposed process · v0.01', anchor='end', color='#586b7b')
 
     node(60, 110, 350, 100, 'Researcher', 'Question + context', '#fff6e5', '#dcc9a7')
     node(465, 110, 350, 100, 'Clarify & frame', 'Shared brief + evidence', '#fff6e5', '#dcc9a7')
@@ -93,8 +106,9 @@ def build() -> str:
     arrow([(240, 622), (240, 668)], purple, 3)
     node(85, 680, 300, 80, 'Compare & choose', 'Plan + open questions', '#f0eaf8', '#bca9d3')
 
-    node(490, 350, 300, 65, 'Task coordinator', fill='#e8f3f0', stroke='#aac9c1')
-    arrow([(397, 720), (438, 720), (438, 398), (478, 398)], teal)
+    node(510, 350, 280, 65, 'Task coordinator', fill='#e8f3f0', stroke='#aac9c1')
+    # The plan enters the coordinator from above, leaving its left side for local repair.
+    arrow([(397, 720), (438, 720), (438, 328), (560, 328), (560, 338)], teal)
     line([(610, 425), (610, 440), (500, 440), (500, 606)], teal, 3)
     for y, label in [(475, 'Literature'), (529, 'Computation'), (583, 'Data & figures')]:
         node(540, y, 230, 46, label, fill='#ffffff', stroke='#b4d0c9')
@@ -105,7 +119,7 @@ def build() -> str:
     node(490, 680, 300, 80, 'Evidence package', 'Check sources & outputs', '#e8f3f0', '#aac9c1')
 
     # Local repair stays inside execution. A later review can request new work.
-    arrow([(478, 720), (475, 720), (475, 455), (730, 455), (730, 425)], amber, 3)
+    arrow([(488, 720), (476, 720), (476, 382), (498, 382)], amber, 3)
     text(1045, 345, 'Independent reviewers', anchor='middle')
     line([(802, 720), (843, 720), (843, 365), (1160, 365)], blue, 3)
     for cx in (940, 1050, 1160):
@@ -120,9 +134,11 @@ def build() -> str:
     arrow([(1050, 622), (1050, 668)], blue, 3)
     node(895, 680, 300, 80, 'Review synthesis', 'Resolve or retain doubts', '#e9f0fa', '#acbfd9')
 
-    # Feedback uses the outer margins instead of extending the figure vertically.
-    arrow([(1005, 772), (1005, 810), (30, 810), (30, 700), (73, 700)], purple, 3.5)
-    arrow([(1080, 772), (1080, 830), (450, 830), (450, 367), (478, 367)], teal, 3.5)
+    # Two stacked feedback routes that never cross: new evidence joins the path into the
+    # coordinator; reconsidering the plan returns under it to "Compare & choose".
+    line([(1005, 772), (1005, 808), (438, 808), (438, 720)], teal, 3.5)
+    out.append(f'<circle cx="438" cy="720" r="5.5" fill="{teal}"/>')
+    arrow([(1080, 772), (1080, 832), (235, 832), (235, 772)], purple, 3.5)
 
     node(870, 865, 350, 90, 'Optional writing', 'Report & explain', '#f3f1f8', '#cfc5df')
     node(465, 865, 350, 90, 'Researcher review', 'Findings + next choices', '#fff6e5', '#dcc9a7')
@@ -132,6 +148,27 @@ def build() -> str:
     for y, color, label in [(879, amber, 'Repair execution'), (915, teal, 'Add evidence'), (951, purple, 'Reconsider the plan')]:
         line([(60, y - 8), (86, y - 8)], color, 4)
         text(100, y, label, color=color)
+
+    # Human checkpoints: required where the researcher sets or accepts direction,
+    # optional where the researcher may inspect intermediate evidence.
+    check(800, 112)            # confirm the shared brief
+    check(394, 676)            # approve the plan
+    check(800, 867)            # accept findings and choose next steps
+    check(800, 676, False)     # spot-check the evidence package
+    check(1205, 676, False)    # look at retained doubts
+    # legend in the top-right corner, where the version label used to be
+    out.append(f'<g font-size="28">')
+    check(560, 34, r=20)
+    out.append(f'<text x="590" y="47" font-family="Arial,Helvetica,sans-serif" font-size="36" style="fill:{human}">Human check</text')
+    out[-1] += '>'
+    check(866, 34, False, r=20)
+    out.append(f'<text x="896" y="47" font-family="Arial,Helvetica,sans-serif" font-size="36" style="fill:{human}">Optional human check</text>')
+    # more checkpoints: every input at the top, plus two optional looks
+    check(395, 112)            # researcher's question and context
+    check(1215, 112)           # existing materials chosen as evidence
+    check(792, 352, False)     # task split before execution
+    check(1205, 867, False)    # written report
+    out.append('</g>')
     out.append('</svg>')
     return '\n'.join(out) + '\n'
 

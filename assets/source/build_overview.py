@@ -133,6 +133,16 @@ def build() -> str:
     arrow([(540, 637), (540, 670), (1035, 670), (1035, 637)], '#648b85')
     text(788, 707, 'Request a specific check', 'body', 'middle', '#466d66')
 
+    # Human checks where the researcher frames the question and accepts the findings.
+    def human_check(x: float, y: float) -> None:
+        add(f'<rect x="{x}" y="{y}" width="214" height="40" rx="20" fill="#b45309" stroke="#ffffff" stroke-width="3"/>')
+        add(f'<circle cx="{x + 26}" cy="{y + 15}" r="6" fill="#ffffff"/>')
+        add(f'<rect x="{x + 16}" y="{y + 22}" width="20" height="11" rx="5" fill="#ffffff"/>')
+        add(f'<text x="{x + 46}" y="{y + 28}" font-size="24" font-weight="700" style="fill:#ffffff">Human check</text>')
+
+    human_check(56, 62)
+    human_check(56, 377)
+
     text(40, 704, 'Decide from evidence', 'small', fill='#526576')
     text(40, 735, 'Shared brief · evidence · decisions', 'small', fill='#526576')
     add('</svg>')

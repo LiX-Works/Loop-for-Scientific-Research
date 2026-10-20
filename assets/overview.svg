@@ -107,6 +107,14 @@
 <polyline points="540,637 540,670 1035,670 1035.0,647.88" fill="none" stroke="#648b85" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
 <polygon points="1035,637 1040.4648,648.88 1029.5352,648.88" fill="#648b85"/>
 <text x="788" y="707" class="body" text-anchor="middle" style="fill:#466d66">Request a specific check</text>
+<rect x="56" y="62" width="214" height="40" rx="20" fill="#b45309" stroke="#ffffff" stroke-width="3"/>
+<circle cx="82" cy="77" r="6" fill="#ffffff"/>
+<rect x="72" y="84" width="20" height="11" rx="5" fill="#ffffff"/>
+<text x="102" y="90" font-size="24" font-weight="700" style="fill:#ffffff">Human check</text>
+<rect x="56" y="377" width="214" height="40" rx="20" fill="#b45309" stroke="#ffffff" stroke-width="3"/>
+<circle cx="82" cy="392" r="6" fill="#ffffff"/>
+<rect x="72" y="399" width="20" height="11" rx="5" fill="#ffffff"/>
+<text x="102" y="405" font-size="24" font-weight="700" style="fill:#ffffff">Human check</text>
 <text x="40" y="704" class="small" text-anchor="start" style="fill:#526576">Decide from evidence</text>
 <text x="40" y="735" class="small" text-anchor="start" style="fill:#526576">Shared brief · evidence · decisions</text>
 </svg>
