@@ -8,6 +8,9 @@
 
 A proposed workflow for working through research questions with a team of AI agents: understand the problem, compare approaches, carry out the work, examine the evidence, and decide what to do next. The researcher sets the direction and makes the scientific judgment.
 
+> [!IMPORTANT]
+> **Human-in-the-Loop.** Agents can hallucinate, drift from the goal, or chase irrelevant numbers. Treat each report as a draft: check the details and the runs behind it, watch the agent at work, and let a researcher correct it and set the next step.
+
 ![Proposed research loop: context, independent advice, synthesis, execution, review, and targeted iteration](assets/overview.svg)
 
 This preview includes a design outline, three editable illustrations, and three manual handoff templates.
